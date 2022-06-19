@@ -1,0 +1,18 @@
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[pilot](
+	[id] [bigint] IDENTITY(1,1) NOT NULL,
+	[name] [nvarchar](50) NOT NULL,
+	[phone] [nvarchar](50) NULL,
+	[email] [nvarchar](50) NULL,
+	[iscurrent] [bit] NOT NULL,
+	[casa_id] [nvarchar](50) NOT NULL
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[pilot] ADD  CONSTRAINT [PK_pilot] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
